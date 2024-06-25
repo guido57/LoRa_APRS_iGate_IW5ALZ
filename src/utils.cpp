@@ -44,7 +44,7 @@ uint32_t    lastScreenOn        = millis();
 namespace Utils {
 
     void processStatus() {
-        String status = Config.callsign + ">APZMDM," + Config.beacon.path;
+        String status = Config.callsign + ">APLMDM," + Config.beacon.path;
         
         if (WiFi.status() == WL_CONNECTED && Config.aprs_is.active && Config.beacon.sendViaAPRSIS) {
             delay(1000);
