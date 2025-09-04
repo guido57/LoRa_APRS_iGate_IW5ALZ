@@ -158,9 +158,9 @@ namespace APRS_IS_Utils {
                 processedSender += ' ';
             }
             if (Config.beacon.path == "") {
-                STATION_Utils::addToOutputPacketBuffer(Config.callsign + ">APLMDM,RFONLY::" + processedSender + ":" + ackMessage);
+                STATION_Utils::addToOutputPacketBuffer(Config.callsign + ">APLRG1,RFONLY::" + processedSender + ":" + ackMessage);
             } else {
-                STATION_Utils::addToOutputPacketBuffer(Config.callsign + ">APLMDM,RFONLY," + Config.beacon.path + "::" + processedSender + ":" + ackMessage);
+                STATION_Utils::addToOutputPacketBuffer(Config.callsign + ">APLRG1,RFONLY," + Config.beacon.path + "::" + processedSender + ":" + ackMessage);
             }
 
             receivedMessage = packet.substring(packet.indexOf(":") + 1, packet.indexOf("{"));
@@ -238,7 +238,7 @@ namespace APRS_IS_Utils {
                         for (int i = Sender.length(); i < 9; i++) {
                             Sender += ' ';
                         }
-                        String ackPacket = Config.callsign + ">APLMDM,TCPIP,qAC::" + Sender + ":" + ackMessage;
+                        String ackPacket = Config.callsign + ">APLRG1,TCPIP,qAC::" + Sender + ":" + ackMessage;
                         #ifdef ESP32_DIY_LoRa_A7670
                             A7670_Utils::uploadToAPRSIS(ackPacket);
                         #else

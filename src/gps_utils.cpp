@@ -52,7 +52,7 @@ namespace GPS_Utils {
     }
 
     void generateBeacons() {
-        String beaconPacket = Config.callsign + ">APLMDM";
+        String beaconPacket = Config.callsign + ">APLRG1";
         if (Config.beacon.path != "") {
             beaconPacket += "," + Config.beacon.path;
         }

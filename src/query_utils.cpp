@@ -39,12 +39,12 @@ namespace QUERY_Utils {
             processedStation += ' ';
         }
         if (queryOrigin == 1) { // from APRS-IS
-            return Config.callsign + ">APLMDM,TCPIP,qAC::" + processedStation + ":" + answer;
+            return Config.callsign + ">APLRG1,TCPIP,qAC::" + processedStation + ":" + answer;
         } else { // else == 0 , from LoRa
             if (Config.beacon.path == "") {
-                return Config.callsign + ">APLMDM,RFONLY::" + processedStation + ":" + answer;
+                return Config.callsign + ">APLRG1,RFONLY::" + processedStation + ":" + answer;
             } else {
-                return Config.callsign + ">APLMDM,RFONLY," + Config.beacon.path + "::" + processedStation + ":" + answer;
+                return Config.callsign + ">APLRG1,RFONLY," + Config.beacon.path + "::" + processedStation + ":" + answer;
             }
         }
     }
