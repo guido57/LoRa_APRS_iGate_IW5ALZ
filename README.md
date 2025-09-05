@@ -9,6 +9,6 @@ I changed a few things to adapt it to my needs
 
 ## SCHEMATIC
 
-!()[images/schematic_.png]
+![images/schematics_.png](images/schematics_.png)
 
 
