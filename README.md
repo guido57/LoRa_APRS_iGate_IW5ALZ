@@ -10,10 +10,16 @@ To have it working with the schematic below, select the platformio environment [
 
 ## CHANGES
 
-The main change is that I added the configurable option to send an APRS message to APRS-IS containing the RSSI, SNR and ErrorFreq of any RF received packet.
+### RSSI MESSAGES
+
+I added the configurable option to send an APRS message to APRS-IS containing the RSSI, SNR and ErrorFreq of any RF received packet.
 In the message section of aprs.fi you'll see something like this:
 
 2025-09-20 19:30:42 CEST: IW5ALZ-7>IW5ALZ-11: RSSI -82 SNR 9.00 FreqErr -13430
+
+Please note that this option can be enabled by the web configurator:
+
+[](images/messaging_web_config.png)
 
 
 ## SCHEMATIC
