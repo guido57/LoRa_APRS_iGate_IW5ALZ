@@ -21,7 +21,7 @@ It means that this iGate (IW5ALZ-11) received an RF APRS packet from IW5ALZ-7 wi
 
 Please note that this option can be enabled by the web configurator:
 
-<img src="images/messaging_web_config.png" width="300" />
+<img src="images/messaging_web_config.png" width="600" />
 
 ## SCHEMATIC
 
