@@ -144,6 +144,8 @@ namespace WEB_Utils {
 
         Config.display.turn180              = request->hasParam("display.turn180", true);
 
+        Config.message.active               = request->hasParam("message.active", true);
+        
         Config.syslog.active                = request->hasParam("syslog.active", true);
 
         if (Config.syslog.active) {

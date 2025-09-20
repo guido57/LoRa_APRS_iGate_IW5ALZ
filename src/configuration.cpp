@@ -91,6 +91,8 @@ void Configuration::writeFile() {
     data["display"]["timeout"]              = display.timeout;
     data["display"]["turn180"]              = display.turn180;
 
+    data["message"]["active"]                = message.active;
+
     data["syslog"]["active"]                = syslog.active;
     data["syslog"]["server"]                = syslog.server;
     data["syslog"]["port"]                  = syslog.port;
@@ -160,6 +162,8 @@ bool Configuration::readFile() {
         display.alwaysOn                = data["display"]["alwaysOn"].as<bool>();
         display.timeout                 = data["display"]["timeout"].as<int>();
         display.turn180                 = data["display"]["turn180"].as<bool>();
+
+        message.active                   = data["message"]["active"].as<bool>();
 
         syslog.active                   = data["syslog"]["active"].as<bool>();
         syslog.server                   = data["syslog"]["server"].as<String>();
@@ -342,6 +346,7 @@ void Configuration::init() {
     display.timeout             = 4;
     display.turn180             = false;
 
+    message.active              = false;
     syslog.active               = false;
     syslog.server               = "192.168.0.100";
     syslog.port                 = 514;

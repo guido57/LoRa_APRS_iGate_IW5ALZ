@@ -51,6 +51,9 @@
         "timeout": 4,
         "turn180": false
     },
+    "message": {
+        "active": false
+    },
     "syslog": {
         "active": false,
         "server": "192.168.0.100",

@@ -82,6 +82,11 @@ public:
     bool    acceptOwn;
 };
 
+class MESSAGE {
+public:
+    bool    active;
+};
+
 class SYSLOG {
 public:
     bool    active;
@@ -131,6 +136,7 @@ public:
     APRS_IS                 aprs_is;
     LoraModule              loramodule;
     Display                 display;
+    MESSAGE                 message;
     SYSLOG                  syslog;
     BME                     bme;
     OTA                     ota;

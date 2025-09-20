@@ -169,6 +169,19 @@ namespace LoRa_Utils {
                         Utils::println(String(millis()) +  " - LoRa Packet Rx    : " + packet.substring(3));
                         Utils::println("(RSSI:" + String(rssi) + " / SNR:" + String(snr) + " / FreqErr:" + String(freqError) + ")");
 
+                        if(Config.message.active) {
+                            // Publish message to APRS-IS with caller, rssi, and snr using buildPacketToTx
+                            int gtIdx = packet.indexOf('>');
+                            String caller = (gtIdx > 0) ? packet.substring(3, gtIdx) : "UNKNOWN";
+                            Utils::println("Caller: " + caller);
+                            String aprsMsg = "RSSI " + String(rssi) + " SNR " + String(snr) + " FreqErr " + String(freqError);
+                            Utils::println(String(millis()) +  " - Sending APRS message: " + aprsMsg);
+                            // Build APRS message packet to myself (IW5ALZ-11), message body includes real caller
+                            String msgPacket = caller + ">APRS,::IW5ALZ-11:" + aprsMsg + "{00";
+                            String txPacket = APRS_IS_Utils::buildPacketToTx(msgPacket, 3); // 3 = message type
+                            APRS_IS_Utils::upload(txPacket);
+                        }    
+
                         if (!Config.lowPowerMode) {
                             ReceivedPacket receivedPacket;
                             receivedPacket.millis   = millis();

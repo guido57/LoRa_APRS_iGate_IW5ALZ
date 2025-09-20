@@ -62,6 +62,8 @@ alwaysOnCheckbox.addEventListener("change", function () {
 //     alwaysOnCheckbox.disabled = this.value !== "";
 // });
 
+const msgCheckbox = document.querySelector('input[name="message.active"]');
+
 const logCheckbox = document.querySelector('input[name="syslog.active"]');
 const serverField = document.querySelector('input[name="syslog.server"]');
 const portField = document.querySelector('input[name="syslog.port"]');
@@ -174,6 +176,9 @@ function loadSettings(settings) {
     document.getElementById("beacon.longitude").value       = settings.beacon.longitude;
     document.getElementById("beacon.sendViaAPRSIS").checked = settings.beacon.sendViaAPRSIS;
     document.getElementById("beacon.sendViaRF").checked     = settings.beacon.sendViaRF;
+
+    // Message
+    document.getElementById("message.active").checked        = settings.message.active;
 
     // Syslog
     document.getElementById("syslog.active").checked        = settings.syslog.active;
