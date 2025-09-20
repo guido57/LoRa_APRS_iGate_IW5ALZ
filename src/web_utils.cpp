@@ -133,7 +133,7 @@ namespace WEB_Utils {
         Config.loramodule.signalBandwidth   = request->getParam("lora.signalBandwidth", true)->value().toInt();
         Config.loramodule.codingRate4       = request->getParam("lora.codingRate4", true)->value().toInt();
         Config.loramodule.power             = request->getParam("lora.power", true)->value().toInt();
-        Config.loramodule.txActive          = request->hasParam("lora.txActive", true);
+         Config.loramodule.txActive          = request->hasParam("lora.txActive", true);
         Config.loramodule.rxActive          = request->hasParam("lora.rxActive", true);
 
         Config.display.alwaysOn             = request->hasParam("display.alwaysOn", true);
