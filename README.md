@@ -17,6 +17,8 @@ In the message section of aprs.fi you'll see something like this:
 
 2025-09-20 19:30:42 CEST: IW5ALZ-7>IW5ALZ-11: RSSI -82 SNR 9.00 FreqErr -13430
 
+It means that this iGate (IW5ALZ-11) received an RF APRS packet from IW5ALZ-7 with RSSI=-82dBm SNR=9dB and with a frequency error of 13430
+
 Please note that this option can be enabled by the web configurator:
 
 ![images/messaging_web_config.png](images/messaging_web_config.png)
