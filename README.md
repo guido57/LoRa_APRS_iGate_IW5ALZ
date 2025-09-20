@@ -8,6 +8,12 @@ I changed a few things to adapt it to my needs
 
 To have it working with the schematic below, select the platformio environment [env:WEMOS-D1-R32-RA02]
 
+## CHANGES
+
+The main change is that I added the configurable option to send an APRS message to APRS-IS containing the RSSI, SNR and ErrorFreq of any RF received packet.
+In the message section of aprs.fi you'll see something like this:
+2025-09-20 19:30:42 CEST: IW5ALZ-7>IW5ALZ-11: RSSI -82 SNR 9.00 FreqErr -13430
+
 ## SCHEMATIC
 
 ![images/schematics_.png](images/schematics_.png)
