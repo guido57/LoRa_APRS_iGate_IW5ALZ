@@ -19,7 +19,7 @@ In the message section of aprs.fi you'll see something like this:
 
 Please note that this option can be enabled by the web configurator:
 
-[](images/messaging_web_config.png)
+![images/messaging_web_config.png](images/messaging_web_config.png)
 
 
 ## SCHEMATIC
