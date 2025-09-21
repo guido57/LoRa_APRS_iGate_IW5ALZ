@@ -34,6 +34,8 @@ or by [data/igate_conf.json](data/igate_conf.json) changing false to true.
 
 ## SCHEMATIC
 
+As you can see the schematic has also the GPS module and an OLED display, which are both optional because an iGate is supposed to be still and it can be configured via the web portal.
+
 ![images/schematics_.png](images/schematics_.png)
 
 
