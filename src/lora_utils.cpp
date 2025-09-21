@@ -180,7 +180,10 @@ namespace LoRa_Utils {
                             String msgPacket = caller + ">APRS,::IW5ALZ-11:" + aprsMsg + "{00";
                             String txPacket = APRS_IS_Utils::buildPacketToTx(msgPacket, 3); // 3 = message type
                             APRS_IS_Utils::upload(txPacket);
-                        }    
+                        }else {
+                            // Handle case where message is not active
+                            Utils::println("Message feature is not active. Skipping APRS message upload.");
+                        }
 
                         if (!Config.lowPowerMode) {
                             ReceivedPacket receivedPacket;
